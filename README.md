@@ -3,6 +3,7 @@
 A real-time computer vision tracking system that uses a custom-trained YOLO11 model to detect and track a target object while controlling a two-axis pan/tilt turret through an ESP32 microcontroller.
 
 The system combines machine learning, computer vision, embedded systems, serial communication, and closed-loop control to autonomously maintain target lock using a webcam and servo-actuated turret platform.
+
 ---
 
 ## Project Overview
