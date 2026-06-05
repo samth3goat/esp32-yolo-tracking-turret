@@ -19,19 +19,19 @@ The system uses a webcam to capture live video, processes frames using OpenCV an
 ## Features
 
 ### Current
--ESP32 pan/tilt control
--Real-time YOLO11 object detection
--Custom-trained object tracking model
--OpenCV webcam integration
--Python ↔ ESP32 serial communication
--Two-axis target tracking
--Target coordinate extraction
--Exponential target smoothing
--Proportional-Derivative (PD) control
--Visual debugging overlay
--Red center reference point
--Green tracked target point
--External servo power system
+- ESP32 pan/tilt control
+- Real-time YOLO11 object detection
+- Custom-trained object tracking model
+- OpenCV webcam integration
+- Python ↔ ESP32 serial communication
+- Two-axis target tracking
+- Target coordinate extraction
+- Exponential target smoothing
+- Proportional-Derivative (PD) control
+- Visual debugging overlay
+- Red center reference point
+- Green tracked target point
+- External servo power system
 
 ---
 
