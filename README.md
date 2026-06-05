@@ -13,7 +13,13 @@ The system uses a webcam to capture live video, processes frames using OpenCV an
 ---
 
 ## Demo
-*In progress*
+
+
+<img width="408" height="434" alt="Untitled - 05 juin 2026 à 16 11 36" src="https://github.com/user-attachments/assets/bc4024de-7969-480d-bd7c-d36b02986683" />
+
+
+
+
 
 ---
 
