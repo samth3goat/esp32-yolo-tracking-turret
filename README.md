@@ -1,9 +1,8 @@
 # ESP32 YOLO Object Tracking Turret
 
-A computer vision tracking turret that detects and follows a custom target object using a YOLO model running on a PC, while an ESP32 controls the pan/tilt servo system.
+A real-time computer vision tracking system that uses a custom-trained YOLO11 model to detect and track a target object while controlling a two-axis pan/tilt turret through an ESP32 microcontroller.
 
-This project combines embedded systems, computer vision, serial communication, and control systems into a real-time autonomous tracking platform.
-
+The system combines machine learning, computer vision, embedded systems, serial communication, and closed-loop control to autonomously maintain target lock using a webcam and servo-actuated turret platform.
 ---
 
 ## Project Overview
@@ -20,17 +19,19 @@ The system uses a webcam to capture live video, processes frames using OpenCV an
 ## Features
 
 ### Current
-- ESP32 firmware control
-- Servo motor control
-- OpenCV live webcam feed
-- YOLO object detection
-- Custom YOLO model support
-- Python ↔ ESP32 serial communication
-
-### Planned
-- Pan/tilt turret tracking
-- PID motion smoothing
-- Distance estimation
+-ESP32 pan/tilt control
+-Real-time YOLO11 object detection
+-Custom-trained object tracking model
+-OpenCV webcam integration
+-Python ↔ ESP32 serial communication
+-Two-axis target tracking
+-Target coordinate extraction
+-Exponential target smoothing
+-Proportional-Derivative (PD) control
+-Visual debugging overlay
+-Red center reference point
+-Green tracked target point
+-External servo power system
 
 ---
 
@@ -61,7 +62,7 @@ Pan/Tilt Servos
 - ESP32 DevKit V1
 - DS3218 Servo motors
 - Logitech C922 USB webcam 
-- External power supply
+- External 5V 5A power supply
 
 ---
 
@@ -172,18 +173,12 @@ esp32/turret_control.ino
 - [x] YOLO object detection
 - [x] Custom model loading
 - [x] Initial ESP32 serial communication
-
-### In Progress
-- [ ] Coordinate extraction from detections
-- [ ] Python to ESP32 movement commands
-- [ ] Pan tracking
-- [ ] Tilt tracking
-
-### Planned
-- [ ] PID control tuning
-- [ ] Distance estimation
-- [ ] Dual servo stabilization
-- [ ] Final turret assembly
+- [x] Coordinate extraction from detections
+- [x] Python to ESP32 movement commands
+- [x] Pan tracking
+- [x] Tilt tracking
+- [x] PD control tuning
+- [x] Final turret assembly
 
 ---
 
@@ -191,9 +186,11 @@ esp32/turret_control.ino
 
 Some issues encountered during development:
 
-- False positives during YOLO custom model training
-- Serial timing/debugging between Python and ESP32
-- Power requirements for high-torque servos
+-Training a custom YOLO model that could reliably identify the target while minimizing false detections.
+-Balancing tracking accuracy and responsiveness to maintain smooth real-time performance.
+-Establishing reliable serial communication between Python and the ESP32.
+-Providing sufficient power for servo motors without causing instability or stalling.
+-Tuning the tracking controller to reduce oscillation and improve target lock.
 
 ---
 
@@ -201,26 +198,12 @@ Some issues encountered during development:
 
 This project is being used as a learning platform for:
 
-- embedded systems programming
-- computer vision
-- real-time object tracking
-- serial communication
-- servo motor control
-- control systems (PID)
-- machine learning model integration
-
----
-
-## Future Improvements
-
-Potential future upgrades:
-
-- Full PID tracking controller
-- Object re-identification
-- Multi-object selection
-- Mobile/web dashboard
-- Autonomous scanning mode
-- Battery-powered portable turret
+-Computer vision using OpenCV and YOLO.
+-Embedded systems programming with the ESP32.
+-Serial communication between software and hardware.
+-Servo control and power management.
+-Control systems and real-time tracking.
+-Debugging and integrating multi-component engineering systems.
 
 ---
 
@@ -235,7 +218,3 @@ The ESP32 acts as the hardware controller for:
 This architecture keeps computer vision processing separate from real-time hardware control.
 
 ---
-
-## Author
-
-Built as a personal robotics/computer vision project to learn embedded systems and autonomous tracking.
