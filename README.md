@@ -93,12 +93,13 @@ esp32-yolo-tracking-turret/
 ├── python/
 │   ├── yolo_tracking.py
 │   ├── serial_control.py
+│   ├── camera_test.py
 │   └── models/
 │       └── custom_model.pt
 │
 ├── esp32/
-│   ├── turret_control.ino
-│   └──  servo_test.ino
+│   └── turret_control.ino
+│    
 │
 ├── images/
 │   ├── setup.jpg
