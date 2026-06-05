@@ -186,11 +186,11 @@ esp32/turret_control.ino
 
 Some issues encountered during development:
 
--Training a custom YOLO model that could reliably identify the target while minimizing false detections.
--Balancing tracking accuracy and responsiveness to maintain smooth real-time performance.
--Establishing reliable serial communication between Python and the ESP32.
--Providing sufficient power for servo motors without causing instability or stalling.
--Tuning the tracking controller to reduce oscillation and improve target lock.
+- Training a custom YOLO model that could reliably identify the target while minimizing false detections.
+- Balancing tracking accuracy and responsiveness to maintain smooth real-time performance.
+- Establishing reliable serial communication between Python and the ESP32.
+- Providing sufficient power for servo motors without causing instability or stalling.
+- Tuning the tracking controller to reduce oscillation and improve target lock.
 
 ---
 
@@ -198,12 +198,12 @@ Some issues encountered during development:
 
 This project is being used as a learning platform for:
 
--Computer vision using OpenCV and YOLO.
--Embedded systems programming with the ESP32.
--Serial communication between software and hardware.
--Servo control and power management.
--Control systems and real-time tracking.
--Debugging and integrating multi-component engineering systems.
+- Computer vision using OpenCV and YOLO.
+- Embedded systems programming with the ESP32.
+- Serial communication between software and hardware.
+- Servo control and power management.
+- Control systems and real-time tracking.
+- Debugging and integrating multi-component engineering systems.
 
 ---
 
