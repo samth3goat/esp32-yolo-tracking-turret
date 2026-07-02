@@ -1,44 +1,33 @@
 # ESP32 YOLO Object Tracking Turret
 
-A real-time computer vision tracking system that uses a custom-trained YOLO11 model to detect and track a target object while controlling a two-axis pan/tilt turret through an ESP32 microcontroller.
+A real-time computer vision tracking system featuring a custom-designed and 3D-printed two-axis pan/tilt turret. The system uses a custom-trained YOLO11 model to detect and track a target object while an ESP32 microcontroller controls the turret through closed-loop PD control.
 
-The system combines machine learning, computer vision, embedded systems, serial communication, and closed-loop control to autonomously maintain target lock using a webcam and servo-actuated turret platform.
+The project integrates mechanical design, computer vision, embedded systems, serial communication, and feedback control into a fully autonomous object tracking platform.
 
 ---
 
 ## Project Overview
 
-The system uses a webcam to capture live video, processes frames using OpenCV and YOLO object detection, determines the target position relative to the screen center, and sends movement commands to an ESP32 which controls the servos.
+The system captures live video using a webcam, processes each frame with OpenCV and a custom-trained YOLO11 model, computes the target's position relative to the center of the frame, and sends tracking commands to an ESP32. The ESP32 executes a PD controller to drive the pan and tilt servos, allowing the custom-designed turret to continuously maintain target lock through visual feedback.
+---
 
+## Skills Demonstrated
+
+- Mechanical Design (CAD)
+- 3D Printing
+- Embedded Systems
+- Computer Vision
+- Control Systems (PD)
+- Python
+- C++
+- OpenCV
+- YOLO11
+- ESP32
 ---
 
 ## Demo
 
-
 <img width="408" height="434" alt="Untitled - 05 juin 2026 à 16 11 36" src="https://github.com/user-attachments/assets/bc4024de-7969-480d-bd7c-d36b02986683" />
-
-
-
-
-
----
-
-## Features
-
-### Current
-- ESP32 pan/tilt control
-- Real-time YOLO11 object detection
-- Custom-trained object tracking model
-- OpenCV webcam integration
-- Python ↔ ESP32 serial communication
-- Two-axis target tracking
-- Target coordinate extraction
-- Exponential target smoothing
-- Proportional-Derivative (PD) control
-- Visual debugging overlay
-- Red center reference point
-- Green tracked target point
-- External servo power system
 
 ---
 
@@ -46,24 +35,43 @@ The system uses a webcam to capture live video, processes frames using OpenCV an
 
 <img width="1163" height="637" alt="final system" src="https://github.com/user-attachments/assets/51c3713d-aaf5-4003-b6c9-d9d5a01a3f26" />
 
+
 Figure 1. High-level architecture of the closed-loop object tracking system. The webcam captures real-time video, the desktop computer performs YOLO11 inference and computes the tracking error, the ESP32 executes the PD controller and generates PWM signals, and the servos reposition the pan/tilt mechanism. The updated camera view provides continuous visual feedback, closing the control loop.
 
 ---
 
+## Features
+
+- Custom-designed and 3D-printed pan/tilt turret
+- Real-time object tracking using a custom-trained YOLO11 model
+- Two-axis servo control with an ESP32 microcontroller
+- OpenCV webcam integration
+- Python ↔ ESP32 serial communication
+- Closed-loop PD tracking controller
+- Target coordinate extraction and smoothing
+- Real-time visual debugging overlay
+- External servo power system
+
+---
+
+
 ## Hardware
 
+- Custom 3D-printed pan/tilt mechanism
 - ESP32 DevKit V1
-- DS3218 Servo motors
-- Logitech C922 USB webcam 
-- External 5V 5A power supply
+- 2 × DS3218 high-torque servo motors
+- Logitech C922 USB webcam
+- 5V 5A regulated external power supply
 
 ---
 
 ## Software Stack
 
 - Python
+- C++
 - OpenCV
-- Ultralytics YOLO
+- Ultralytics YOLO11
+- ESP32 Arduino Framework
 - Arduino IDE
 
 ---
