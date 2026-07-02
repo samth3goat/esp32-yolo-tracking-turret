@@ -44,23 +44,9 @@ The system uses a webcam to capture live video, processes frames using OpenCV an
 
 ## System Architecture
 
-```text
-Webcam
-   ↓
-OpenCV Video Capture
-   ↓
-YOLO Object Detection
-   ↓
-Target Coordinate Extraction
-   ↓
-Tracking Logic
-   ↓
-Serial Communication
-   ↓
-ESP32
-   ↓
-Pan/Tilt Servos
-```
+<img width="1163" height="637" alt="final system" src="https://github.com/user-attachments/assets/51c3713d-aaf5-4003-b6c9-d9d5a01a3f26" />
+
+Figure 1. High-level architecture of the closed-loop object tracking system. The webcam captures real-time video, the desktop computer performs YOLO11 inference and computes the tracking error, the ESP32 executes the PD controller and generates PWM signals, and the servos reposition the pan/tilt mechanism. The updated camera view provides continuous visual feedback, closing the control loop.
 
 ---
 
