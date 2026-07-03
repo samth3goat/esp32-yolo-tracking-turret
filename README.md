@@ -9,6 +9,7 @@ The project integrates mechanical design, computer vision, embedded systems, ser
 ## Project Overview
 
 The system captures live video using a webcam, processes each frame with OpenCV and a custom-trained YOLO11 model, computes the target's position relative to the center of the frame, and sends tracking commands to an ESP32. The ESP32 executes a PD controller to drive the pan and tilt servos, allowing the custom-designed turret to continuously maintain target lock through visual feedback.
+
 ---
 
 ## Skills Demonstrated
