@@ -58,7 +58,7 @@ The pan/tilt mechanism was designed from scratch in SolidWorks and manufactured 
 
 #### CAD Design
 
-<img width="335" height="360" alt="Untitled Project" src="https://github.com/user-attachments/assets/076c4f31-4464-4bc1-a5e5-45b9d0914415" /> <img width="335" height="360" alt="turret final" src="https://github.com/user-attachments/assets/13b1c686-5635-4c40-8190-1dc583932e8d" /> <img width="325" height="360" alt="Untitled Project" src="https://github.com/user-attachments/assets/af21a6f8-7d72-4dc2-bdd5-3e69ebc68960" />
+<img width="300" height="340" alt="Untitled Project" src="https://github.com/user-attachments/assets/076c4f31-4464-4bc1-a5e5-45b9d0914415" /> <img width="300" height="340" alt="turret final" src="https://github.com/user-attachments/assets/13b1c686-5635-4c40-8190-1dc583932e8d" /> <img width="300" height="340" alt="Untitled Project" src="https://github.com/user-attachments/assets/af21a6f8-7d72-4dc2-bdd5-3e69ebc68960" />
 
 ---
 
@@ -100,16 +100,13 @@ esp32-yolo-tracking-turret/
 │
 ├── esp32/
 │   └── turret_control.ino
-│    
 │
-├── images/
-│   ├── setup.jpg
-│   └── wiring_diagram.png
-│
-└── docs/
-    ├── pid_notes.md
-    ├── architecture.md
-    └── troubleshooting.md
+└── CAD/
+    ├── servo assembly.SLDASM
+    ├── servo head.SLDPRT
+    ├── servo base.SLDPRT
+    ├── servo mount.SLDPRT
+    └── turret base.SLDPRT
 ```
 
 ---
