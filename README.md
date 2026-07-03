@@ -19,8 +19,6 @@ The system captures live video using a webcam, processes each frame with OpenCV 
 - Embedded Systems
 - Computer Vision
 - Control Systems (PD)
-- Python
-- C++
 - OpenCV
 - YOLO11
 - ESP32
@@ -29,15 +27,6 @@ The system captures live video using a webcam, processes each frame with OpenCV 
 ## Demo
 
 <img width="408" height="434" alt="Untitled - 05 juin 2026 à 16 11 36" src="https://github.com/user-attachments/assets/bc4024de-7969-480d-bd7c-d36b02986683" />
-
----
-
-## System Architecture
-
-<img width="1163" height="637" alt="final system" src="https://github.com/user-attachments/assets/51c3713d-aaf5-4003-b6c9-d9d5a01a3f26" />
-
-
-Figure 1. High-level architecture of the closed-loop object tracking system. The webcam captures real-time video, the desktop computer performs YOLO11 inference and computes the tracking error, the ESP32 executes the PD controller and generates PWM signals, and the servos reposition the pan/tilt mechanism. The updated camera view provides continuous visual feedback, closing the control loop.
 
 ---
 
@@ -55,6 +44,23 @@ Figure 1. High-level architecture of the closed-loop object tracking system. The
 
 ---
 
+## System Architecture
+
+<img width="1163" height="637" alt="final system" src="https://github.com/user-attachments/assets/51c3713d-aaf5-4003-b6c9-d9d5a01a3f26" />
+
+
+Figure 1. High-level architecture of the closed-loop object tracking system. The webcam captures real-time video, the desktop computer performs YOLO11 inference and computes the tracking error, the ESP32 executes the PD controller and generates PWM signals, and the servos reposition the pan/tilt mechanism. The updated camera view provides continuous visual feedback, closing the control loop.
+
+---
+## Mechanical Design
+
+The pan/tilt mechanism was designed from scratch in SolidWorks and manufactured using 3D printing. The assembly supports a Logitech C922 webcam and integrates two DS3218 servo motors to provide independent pan and tilt motion.
+
+#### CAD Design
+
+<img width="335" height="360" alt="Untitled Project" src="https://github.com/user-attachments/assets/076c4f31-4464-4bc1-a5e5-45b9d0914415" /> <img width="335" height="360" alt="turret final" src="https://github.com/user-attachments/assets/13b1c686-5635-4c40-8190-1dc583932e8d" /> <img width="325" height="360" alt="Untitled Project" src="https://github.com/user-attachments/assets/af21a6f8-7d72-4dc2-bdd5-3e69ebc68960" />
+
+---
 
 ## Hardware
 
